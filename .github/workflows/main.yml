@@ -20,7 +20,7 @@ jobs:
           id: build-docker-image-swarm
           run: |
             ls -la 
-            docker build . -f Dockerfile -t joschlag/cutadapt:5.1
+            docker build . -f Dockerfile -t joschlag/cutadapt:4.9
         - name: push the docker image
           id: push-docker-image-swarm
-          run: docker push ${{secrets.DOCKERHUB_USERNAME}}/cutadapt:5.1
+          run: docker push ${{secrets.DOCKERHUB_USERNAME}}/cutadapt:4.9
